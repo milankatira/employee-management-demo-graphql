@@ -18,8 +18,8 @@ This is a GraphQL API backend built with Node.js, Express, Apollo Server, and Mo
 
 1.  **Clone the repository:**
     ```bash
-    git clone <repository_url>
-    cd api
+    git clone https://github.com/milankatira/employee-management-demo-graphql
+    cd backend
     ```
 
 2.  **Install dependencies:**
