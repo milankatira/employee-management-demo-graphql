@@ -1,0 +1,33 @@
+version: '3.8'
+
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "4000:4000"
+    env_file:
+      - .env
+    # depends_on:
+    #   - mongo
+    #   - redis
+    volumes:
+      - .:/usr/src/app # Mount the current directory into the container for development
+      - /usr/src/app/node_modules # Exclude node_modules from the mount
+
+#   mongo:
+#     image: mongo:latest
+#     ports:
+#       - "27017:27017"
+#     volumes:
+#       - mongo-data:/data/db
+
+#   redis:
+#     image: redis:latest
+#     ports:
+#       - "6379:6379"
+#     command: redis-server --appendonly yes --maxmemory-policy noeviction
+
+# volumes:
+#   mongo-data:
